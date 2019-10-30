@@ -7,7 +7,7 @@
   4. Use the further trained model to upscale images and evaluate effectiveness by comparing PSNR and SSIM against ground truth originals
   
 # Composition
-- This repository combines several previous repositories of the author's forks and some of their own work
+- This repository combines several previous repositories of the author's forks and some original work
 - The main repositories used as a source for this repository were:
   1. [dancingborg/ECU_CSG3303_RegistrationPlateGenerator](https://github.com/dancingborg/ECU_CSG3303_RegistrationPlateGenerator), the author's own work
   2. [dancingborg/ECU_CSG3303_BasicSR](https://github.com/dancingborg/ECU_CSG3303_BasicSR), a fork of [xinntao/BasicSR](https://github.com/xinntao/BasicSR)
@@ -33,7 +33,7 @@
         year = {2018}
     }
 ```
-- The following reference gives attribution to the oauthor of the riginal [ESRGAN](https://github.com/xinntao/ESRGAN) code used in this repository:
+- The following reference gives attribution to the oauthor of the original [ESRGAN](https://github.com/xinntao/ESRGAN) code used in this repository:
 ```
     @article{wang2018esrgan,
         author={Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Loy, Chen Change and Qiao, Yu and Tang, Xiaoou},

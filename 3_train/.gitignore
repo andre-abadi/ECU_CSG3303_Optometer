@@ -1,0 +1,25 @@
+*.mypy*
+
+# folder
+.vscode
+
+experiments/TRAINED*
+
+results/*
+tb_logger/*
+
+# file type
+*.svg
+*.pyc
+*.t7
+*.caffemodel
+*.mat
+*.npy
+
+# latex
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz

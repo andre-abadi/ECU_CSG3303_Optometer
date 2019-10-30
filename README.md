@@ -14,9 +14,9 @@
   3. [dancingborg/ECU_CSG3303_ESRGAN](https://github.com/dancingborg/ECU_CSG3303_ESRGAN), a fork of [xinntao/ESRGAN](https://github.com/xinntao/ESRGAN)
   
 # Attribution
-- This repository contains code to train and executed ESRGAN, which is an original work by [xinntao](https://github.com/xinntao)
-  - The BasicSR and ESRGAN components of this repository are predominantly not the original work of the author, but adapted (forked) as permitted by the licenses of the original works
-- The following reference gives attribution to the author of the original BasicSR code used in this repository:
+- This repository contains code to train and executed [ESRGAN](https://github.com/xinntao/ESRGAN), which is an original work by [xinntao](https://github.com/xinntao)
+  - The [BasicSR](https://github.com/xinntao/BasicSR) and [ESRGAN](https://github.com/xinntao/ESRGAN) components of this repository are predominantly not the original work of the author, but adapted (forked) as permitted by the licenses of the original works
+- The following reference gives attribution to the author of the original [BasicSR](https://github.com/xinntao/BasicSR) code used in this repository:
 ```
     @InProceedings{wang2018esrgan,
         author = {Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Qiao, Yu and Loy, Chen Change},
@@ -33,7 +33,7 @@
         year = {2018}
     }
 ```
-- The following reference gives attribution to the oauthor of the riginal ESRGAN code used in this repository:
+- The following reference gives attribution to the oauthor of the riginal [ESRGAN](https://github.com/xinntao/ESRGAN) code used in this repository:
 ```
     @article{wang2018esrgan,
         author={Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Loy, Chen Change and Qiao, Yu and Tang, Xiaoou},

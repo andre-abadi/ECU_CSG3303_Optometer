@@ -52,11 +52,23 @@
 # Pre-Requisities
 - This repository requires the following environment to operate correctly
 
-| Type | State |
-| ---  | ---   |
-
+| Type             | State                   |
+| ---              | ---                     |
+| Operating System | Linux (Ubuntu)          |
+| Hardware         | NVIDIA CUDA-enabled GPU |
+| Software         | Linux Nvidia Drivers    |
 
 # Installation
 - The author took the following steps to provision the working environment so that this repository
 
+| Software  | Installation Command                                                         |
+| ---       | ---                                                                          |
+| Python 3  | `sudo apt install python3 python3-pip`                                       |
+| Git       | `sudo apt install git`                                                       |
+| CUDA      | `sudo apt install cuda nvidia-cuda-toolkit`                                  |
+| Python ML | `pip3 install numpy opencv-python lmdb pyyaml tb-nightly future torchvision` |
+| Auto Fix  | `sudo dpkg --configure -a && sudo apt -f install`                            |
+
+
 # Usage
+- Each numbered folder has its own README.md file with instructions on how to use that particlar tool, but a brief overview is provided here

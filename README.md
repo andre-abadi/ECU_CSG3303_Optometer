@@ -72,3 +72,34 @@
 
 # Usage
 - Each numbered folder has its own README.md file with instructions on how to use that particlar tool, but a brief overview is provided here
+1. **1_generator** is a Python 3 program that generates random registration plate character sets
+
+  a. Execute `1_generate.sh`
+  b. Enter the number of plates to be generated. `How many plates? Default is 5:`
+  c. Enter the desired file to be written by the program. Which file to write to? `Default is output.txt:`
+  d. Enter the plate type to be generated. `Plate type to generate? Default is 1:`
+  e. See `1_generate/README.md` for generation options
+2. **2_render** is a folder of image files that you can load in Photoshop
+  - Install the font at `2_render/Fonts/`
+  - Use the generated character sets as variables to substitute the static strings in the files
+  - Export each variable as a file
+  - Use another image manipulation program (like Irfan View) to make folders of downsampled training and test images while keeping the ground truth values for reference
+3. **3_train** is an adapted version of [BasicSR](https://github.com/xinntao/BasicSR) for this project
+  a. Check `config.yml` for correctness of input directories and settings
+    - Check `pretrain_model_G` for pretrained model location, typically
+      `RRDB_PSNR.pth` or `RRDB_ESRGAN.pth`
+    - Check `dataroot_GT` for directory of **G**round **T**ruth high resolution images
+    - Check `dataroot_LQ` for directory of **L**ow **Q**uality downsampled images
+    - Check `n_workers` and lower it if running out of memory
+    - Check `batch_size` and lower it if running out of memory
+    - Check `niter` for **n**umber of desired **iter**ations
+  b. Execute `3_train.sh` from the command line
+  c. When complete, check `experiments/TRAINED/models/` for models to import to ESRGAN
+4. **4_evaluate** is an adapted version of [ESRGAN](https://github.com/xinntao/ESRGAN) for this project
+  a. Check `4_evaluate.sh`
+    - Modify line 10 for where to source latest model from BasicSR
+    - Modify line 14 for input folder
+    - Modify line 22 for output folder
+    - Modify line 29 to archive the model used with a time reference
+  b. Run `4_evaluate.sh`
+  c. Check output folder

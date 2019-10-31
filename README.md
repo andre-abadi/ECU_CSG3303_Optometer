@@ -9,22 +9,22 @@
 # Pre-Requisities
 - This repository requires the following environment to operate correctly
 
-| Type             | State                   |
-| ---              | ---                     |
-| Operating System | Linux (Ubuntu)          |
-| Hardware         | NVIDIA CUDA-enabled GPU |
-| Software         | Linux Nvidia Drivers    |
+  | Type             | State                   |
+  | ---              | ---                     |
+  | Operating System | Linux (Ubuntu)          |
+  | Hardware         | NVIDIA CUDA-enabled GPU |
+  | Software         | Linux Nvidia Drivers    |
 
 # Installation
 - The author took the following steps to provision the working environment so that this repository
 
-| Software  | Installation Command                                                         |
-| ---       | ---                                                                          |
-| Python 3  | `sudo apt install python3 python3-pip`                                       |
-| Git       | `sudo apt install git`                                                       |
-| CUDA      | `sudo apt install cuda nvidia-cuda-toolkit`                                  |
-| Python ML | `pip3 install numpy opencv-python lmdb pyyaml tb-nightly future torchvision` |
-| Auto Fix  | `sudo dpkg --configure -a && sudo apt -f install`                            |
+  | Software  | Installation Command                                                         |
+  | ---       | ---                                                                          |
+  | Python 3  | `sudo apt install python3 python3-pip`                                       |
+  | Git       | `sudo apt install git`                                                       |
+  | CUDA      | `sudo apt install cuda nvidia-cuda-toolkit`                                  |
+  | Python ML | `pip3 install numpy opencv-python lmdb pyyaml tb-nightly future torchvision` |
+  | Auto Fix  | `sudo dpkg --configure -a && sudo apt -f install`                            |
 
 
 # Usage
@@ -74,7 +74,7 @@
 - This repository contains code to train and executed [ESRGAN](https://github.com/xinntao/ESRGAN), which is an original work by [xinntao](https://github.com/xinntao)
   - The [BasicSR](https://github.com/xinntao/BasicSR) and [ESRGAN](https://github.com/xinntao/ESRGAN) components of this repository are predominantly not the original work of the author, but adapted (forked) as permitted by the licenses of the original works
 - The following reference gives attribution to the author of the original [BasicSR](https://github.com/xinntao/BasicSR) code used in this repository:
-```
+  ```
     @InProceedings{wang2018esrgan,
         author = {Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Qiao, Yu and Loy, Chen Change},
         title = {ESRGAN: Enhanced super-resolution generative adversarial networks},
@@ -89,9 +89,9 @@
         month = {June},
         year = {2018}
     }
-```
+  ```
 - The following reference gives attribution to the oauthor of the original [ESRGAN](https://github.com/xinntao/ESRGAN) code used in this repository:
-```
+  ```
     @article{wang2018esrgan,
         author={Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Loy, Chen Change and Qiao, Yu and Tang, Xiaoou},
         title={ESRGAN: Enhanced super-resolution generative adversarial networks},
@@ -105,4 +105,4 @@
         month = {September},
         year = {2018}
     }
-```
+  ```

@@ -1,5 +1,5 @@
 # Introduction
-- This repository is an open source representation of the author's work towards the learning unit **CSG3303 Applied IT Project** at Edith Cowan University in Semester 2 of 2019
+- This repository is an open source representation of the author's **CSG3303 Applied IT Project** at Edith Cowan University in Semester 2 of 2019
 - This repository contains the code and templates needed to:
   1. Generate random valid registration plate character sets
   2. Render synthetic Western Australian vehicle registration plates using the randomly generated character sets
@@ -72,34 +72,38 @@
 
 # Usage
 - Each numbered folder has its own README.md file with instructions on how to use that particlar tool, but a brief overview is provided here
-1. **1_generator** is a Python 3 program that generates random registration plate character sets
-
-  a. Execute `1_generate.sh`
-  b. Enter the number of plates to be generated. `How many plates? Default is 5:`
-  c. Enter the desired file to be written by the program. Which file to write to? `Default is output.txt:`
-  d. Enter the plate type to be generated. `Plate type to generate? Default is 1:`
-  e. See `1_generate/README.md` for generation options
-2. **2_render** is a folder of image files that you can load in Photoshop
-  - Install the font at `2_render/Fonts/`
-  - Use the generated character sets as variables to substitute the static strings in the files
-  - Export each variable as a file
-  - Use another image manipulation program (like Irfan View) to make folders of downsampled training and test images while keeping the ground truth values for reference
-3. **3_train** is an adapted version of [BasicSR](https://github.com/xinntao/BasicSR) for this project
-  a. Check `config.yml` for correctness of input directories and settings
-    - Check `pretrain_model_G` for pretrained model location, typically
-      `RRDB_PSNR.pth` or `RRDB_ESRGAN.pth`
-    - Check `dataroot_GT` for directory of **G**round **T**ruth high resolution images
-    - Check `dataroot_LQ` for directory of **L**ow **Q**uality downsampled images
-    - Check `n_workers` and lower it if running out of memory
-    - Check `batch_size` and lower it if running out of memory
-    - Check `niter` for **n**umber of desired **iter**ations
-  b. Execute `3_train.sh` from the command line
-  c. When complete, check `experiments/TRAINED/models/` for models to import to ESRGAN
-4. **4_evaluate** is an adapted version of [ESRGAN](https://github.com/xinntao/ESRGAN) for this project
-  a. Check `4_evaluate.sh`
-    - Modify line 10 for where to source latest model from BasicSR
-    - Modify line 14 for input folder
-    - Modify line 22 for output folder
-    - Modify line 29 to archive the model used with a time reference
-  b. Run `4_evaluate.sh`
-  c. Check output folder
+- **1_generator** is a Python 3 program that generates random registration plate character sets
+  1. Execute `1_generate.sh`
+  2. Enter the number of plates to be generated. `How many plates? Default is 5:`
+  3. Enter the desired file to be written by the program. Which file to write to? `Default is output.txt:`
+  4. Enter the plate type to be generated. `Plate type to generate? Default is 1:`
+  5. See `1_generate/README.md` for generation options
+- **2_render** is a folder of image files that you can load in Photoshop
+  1. Install the font at `2_render/Fonts/`
+  2. Use the generated character sets as variables to substitute the static strings in the files
+  3. Export each variable as a file
+  4. Use another image manipulation program (like Irfan View) to make folders of downsampled training and test images while keeping the ground truth values for reference
+- **3_train** is an adapted version of [BasicSR](https://github.com/xinntao/BasicSR) for this project
+  1. Check `config.yml` for correctness of input directories and settings
+  
+      | Setting            | Effect                                                                                        |
+      | ---                |  ---                                                                                          |
+      | `pretrain_model_G` | Path to pretrained model with `pth` extension, typically `RRDB_PSNR.pth` or `RRDB_ESRGAN.pth` |     
+      | `dataroot_GT`      | Directory of **G**round **T**ruth high resolution images                                      |
+      | `dataroot_LQ`      | Directory of **L**ow **Q**uality downsampled images                                           |
+      | `n_workers`        | Number of worker threads. Lower it if running out of memory                                   |
+      | `batch_size`       | Lower it if running out of memory                                                             |
+      | `niter`            | **n**umber of **iter**ations                                                                  |
+  2. Execute `3_train.sh` from the command line
+  3. When complete, check `experiments/TRAINED/models/` for models to import to ESRGAN
+- **4_evaluate** is an adapted version of [ESRGAN](https://github.com/xinntao/ESRGAN) for this project
+  1. Check `4_evaluate.sh`
+  
+      | Setting            | Effect                                                |
+      | ---                | ---                                                   |
+      | Line 10            | Where to source latest model from BasicSR             |
+      | Line 14            | Input folder                                          |
+      | Line 22            | Output folder                                         |
+      | Line 29            | Where to archive the model used with a time reference |
+  2. Run `4_evaluate.sh`
+  3. Check output folder

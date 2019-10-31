@@ -5,13 +5,6 @@
   2. Render synthetic Western Australian vehicle registration plates using the randomly generated character sets
   3. Conduct further training of a pre-trained SRGAN model using the synthetic registration plates
   4. Use the further trained model to upscale images and evaluate effectiveness by comparing PSNR and SSIM against ground truth originals
-  
-# Composition
-- This repository combines several previous repositories of the author's forks and some original work
-- The main repositories used as a source for this repository were:
-  1. [dancingborg/ECU_CSG3303_RegistrationPlateGenerator](https://github.com/dancingborg/ECU_CSG3303_RegistrationPlateGenerator), the author's own work
-  2. [dancingborg/ECU_CSG3303_BasicSR](https://github.com/dancingborg/ECU_CSG3303_BasicSR), a fork of [xinntao/BasicSR](https://github.com/xinntao/BasicSR)
-  3. [dancingborg/ECU_CSG3303_ESRGAN](https://github.com/dancingborg/ECU_CSG3303_ESRGAN), a fork of [xinntao/ESRGAN](https://github.com/xinntao/ESRGAN)
 
 # Pre-Requisities
 - This repository requires the following environment to operate correctly
@@ -73,6 +66,11 @@
   3. Check output folder
 
 # Attribution
+- This repository combines several previous repositories of the author's forks and some original work
+- The main repositories used as a source for this repository were as follows, and they contain all the commits showing progress and modifications to any original works:
+  1. [dancingborg/ECU_CSG3303_RegistrationPlateGenerator](https://github.com/dancingborg/ECU_CSG3303_RegistrationPlateGenerator), the author's own work
+  2. [dancingborg/ECU_CSG3303_BasicSR](https://github.com/dancingborg/ECU_CSG3303_BasicSR), a fork of [xinntao/BasicSR](https://github.com/xinntao/BasicSR)
+  3. [dancingborg/ECU_CSG3303_ESRGAN](https://github.com/dancingborg/ECU_CSG3303_ESRGAN), a fork of [xinntao/ESRGAN](https://github.com/xinntao/ESRGAN)
 - This repository contains code to train and executed [ESRGAN](https://github.com/xinntao/ESRGAN), which is an original work by [xinntao](https://github.com/xinntao)
   - The [BasicSR](https://github.com/xinntao/BasicSR) and [ESRGAN](https://github.com/xinntao/ESRGAN) components of this repository are predominantly not the original work of the author, but adapted (forked) as permitted by the licenses of the original works
 - The following reference gives attribution to the author of the original [BasicSR](https://github.com/xinntao/BasicSR) code used in this repository:

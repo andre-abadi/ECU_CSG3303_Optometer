@@ -1,12 +1,13 @@
 # Introduction
 - This repository is an open source representation of the author's **CSG3303 Applied IT Project** at Edith Cowan University in Semester 2 of 2019
+- This repository accompanies the primary deliverable for the project, an analytical report
+- A redacted copy of the analytical report can be found in the **5_report** folder of this repository
 - This repository contains the code and templates needed to:
   1. Generate random valid registration plate character sets
   2. Render synthetic Western Australian vehicle registration plates using the randomly generated character sets
   3. Conduct further training of a pre-trained SRGAN model using the synthetic registration plates
   4. Use the further trained model to upscale images and evaluate effectiveness by comparing PSNR and SSIM against ground truth originals
-- This repository accompanies the primary deliverable for the project, an analytical report
-- A redacted copy of the analytical report can be found in the **5_report** folder of this repository
+
 
 # Pre-Requisities
 - This repository requires the following environment to operate correctly

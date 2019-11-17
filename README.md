@@ -47,17 +47,20 @@
 
 # Usage
 - Each numbered folder has its own README.md file with instructions on how to use that particlar tool, but a brief overview is provided here
+
 - **1_generator** is a Python 3 program that generates random registration plate character sets
   1. Execute `1_generate.sh`
   2. Enter the number of plates to be generated. `How many plates? Default is 5:`
   3. Enter the desired file to be written by the program. Which file to write to? `Default is output.txt:`
   4. Enter the plate type to be generated. `Plate type to generate? Default is 1:`
   5. See `1_generate/README.md` for generation options
+
 - **2_render** is a folder of image files that you can load in Photoshop
   1. Install the font at `2_render/Fonts/`
   2. Use the generated character sets as variables to substitute the static strings in the files
   3. Export each variable as a file
   4. Use another image manipulation program (like Irfan View) to make folders of downsampled training and test images while keeping the ground truth values for reference
+
 - **3_train** is an adapted version of [BasicSR](https://github.com/xinntao/BasicSR) for this project
   1. Check `config.yml` for correctness of input directories and settings
   
@@ -71,6 +74,7 @@
       | `niter`            | **n**umber of **iter**ations                                                                  |
   2. Execute `3_train.sh` from the command line
   3. When complete, check `experiments/TRAINED/models/` for models to import to ESRGAN
+
 - **4_evaluate** is an adapted version of [ESRGAN](https://github.com/xinntao/ESRGAN) for this project
   1. Check `4_evaluate.sh`
   

@@ -8,6 +8,21 @@
   3. Conduct further training of a pre-trained SRGAN model using the synthetic registration plates
   4. Use the further trained model to upscale images and evaluate effectiveness by comparing PSNR and SSIM against ground truth originals
 
+# Samples
+
+| Stage                       | JPG                                      | PNG                                      |
+| ---                         | ---                                      | ---                                      |
+| Grount Truth                | ![](0_samples/1a_jpg_ground_truth.png)   | ![](0_samples/2a_png_ground_truth.png)   |
+| Low Resolution              | ![](0_samples/1b_jpg_low_resolution.png) | ![](0_samples/2b_png_low_resolution.png) |
+| Lanczos Algorithm           | ![](0_samples/1c_jpg_lanczos.png)        | ![](0_samples/2c_png_lanczos.png)        |
+| ESRGAN                      | ![](0_samples/1d_jpg_esrgan.png)         | ![](0_samples/2d_png_esrgan.png)         |
+| **Optometer**               | ![](0_samples/1e_jpg_optometer.png)      | ![](0_samples/2e_png_optometer.png)      |
+
+- The above samples represent the results of this project as well as  comparison to similar technologies
+- The ground truth images were at a resolution of 200 pixels wide, and the low resolution images were down sampled to 50 pixels wide
+- Lanczos Algorithm was selected as a *best of* non-machine learning upscaling methods
+- ESRGAN with default  `RRDB_PSNR_x4.pth` model was the base upon which this project aimed to improve
+- Optometer results are shown at the bottom, with clear improvements to visual acuity compared to non-ML and default models
 
 # Pre-Requisities
 - This repository requires the following environment to operate correctly
